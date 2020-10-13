@@ -3,7 +3,6 @@
 
 namespace App\Models;
 
-
 use App\Utils\Singleton;
 
 class ProjectModel extends BaseModel
