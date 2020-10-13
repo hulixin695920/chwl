@@ -79,7 +79,7 @@ class ProjectController extends Controller
             $grid->column('image', '封面')->image(env('IMAGE_URL') , 50, 50);
             $grid->title('标题');
             $grid->app_id('小程序ID');
-            $grid->path('小程序路径');
+//            $grid->path('小程序路径');
             $grid->description('描述');
             $states = [
                 'on' => ['value' => 1, 'text' => '启用', 'color' => 'primary'],
