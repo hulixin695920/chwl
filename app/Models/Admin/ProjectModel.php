@@ -4,7 +4,9 @@
 namespace App\Models\Admin;
 
 
-class ProjectModel
+use Illuminate\Database\Eloquent\Model;
+
+class ProjectModel extends Model
 {
     protected $table = 't_project';
 
