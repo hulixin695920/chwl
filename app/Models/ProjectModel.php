@@ -23,7 +23,7 @@ class ProjectModel extends BaseModel
         $isEnd = 0;
         $offset = ($page * $pageSize) - $pageSize;
         $order = ['created_at' => 'desc'];
-        $column = ['app_id', 'title', 'created_at', 'description', 'image', 'url'];
+        $column = ['app_id', 'title', 'created_at', 'description', 'image', 'url','path'];
         $where['status'] = 1;
         $list = $this->getList($column, $where, $order, null, $pageSize, $offset);
         if (count($list) < $pageSize) {
