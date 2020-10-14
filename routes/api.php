@@ -36,5 +36,8 @@ $router->group([
     // 保存用户信息
     $router->post('/save-user-info', 'UserController@saveUser');
 
+    $router->get('/get-user-info', 'UserController@getInfo');
+
+
 
 });
