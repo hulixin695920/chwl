@@ -10,6 +10,6 @@ class BannerModel extends BaseModel
 {
     use Singleton;
 
-    protected $table = 't_banners';
+    protected $table = 't_banner';
 
 }
