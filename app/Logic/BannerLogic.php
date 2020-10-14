@@ -19,7 +19,7 @@ class BannerLogic
     {
         $data = BannerModel::getInstance()->get()->toArray();
         foreach ($data as $key => $value) {
-            $data[$key]->image = env('IMAGE_URL') . $value->image;
+            $data[$key]['image'] = env('IMAGE_URL') . $value['image'];
         }
 
         return $data;
