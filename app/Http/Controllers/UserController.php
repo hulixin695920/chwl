@@ -27,6 +27,8 @@ class UserController extends Controller
         $data['gender'] = $request->input('gender', 0);
         $data['province'] = $request->input('province', '');
         $data['city'] = $request->input('city', '');
+        $data['realname'] = $request->input('realname', '');
+        $data['mobile_phone'] = $request->input('mobile_phone', '');
         foreach ($data as $key => $value) {
             if (empty($value) && $value !== 0) {
                 unset($data[$key]);

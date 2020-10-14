@@ -120,7 +120,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Controllers" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
@@ -128,11 +128,11 @@
       <recent name="$PROJECT_DIR$/app/Http/Controllers" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app" />
-      <recent name="$PROJECT_DIR$/app/Logic" />
-      <recent name="$PROJECT_DIR$/app/Models" />
-      <recent name="$PROJECT_DIR$/app/Http" />
       <recent name="$PROJECT_DIR$/app/Http/Controllers" />
+      <recent name="$PROJECT_DIR$/app/Models" />
+      <recent name="$PROJECT_DIR$/app/Logic" />
+      <recent name="$PROJECT_DIR$/app" />
+      <recent name="$PROJECT_DIR$/app/Http" />
     </key>
   </component>
   <component name="RunManager">
@@ -151,7 +151,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602483969436</updated>
-      <workItem from="1602483971372" duration="23516000" />
+      <workItem from="1602483971372" duration="30260000" />
     </task>
     <servers />
   </component>
@@ -163,11 +163,11 @@
       <screen x="48" y="23" width="2000" height="1257" />
     </state>
     <state x="786" y="415" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/48.23.2000.1257@48.23.2000.1257" timestamp="1602562080479" />
-    <state x="795" y="483" key="NewPhpClassDialog" timestamp="1602583162664">
+    <state x="795" y="483" key="NewPhpClassDialog" timestamp="1602664538075">
       <screen x="48" y="23" width="2000" height="1257" />
     </state>
     <state x="795" y="483" key="NewPhpClassDialog/-168.-1417.2560.1417/48.23.2000.1257@48.23.2000.1257" timestamp="1602493460669" />
-    <state x="795" y="483" key="NewPhpClassDialog/48.23.2000.1257@48.23.2000.1257" timestamp="1602583162664" />
+    <state x="795" y="483" key="NewPhpClassDialog/48.23.2000.1257@48.23.2000.1257" timestamp="1602664538075" />
     <state x="867" y="585" key="NewPhpFileDialog" timestamp="1602560587872">
       <screen x="48" y="23" width="2000" height="1257" />
     </state>

@@ -22,16 +22,10 @@ class UserLogic
     {
         $result = UserModel::getInstance()->getOneRecord($userId);
 
-        $data = [];
         if (empty($result)) {
             CommonUtil::throwException(1, '用户信息不存在');
         }
-
-        $data['is_member'] = (empty($result['expire_time'])) ? 0 : ($result['expire_time'] > time() ? 1 : 0);
-        $data['expire_time'] = (empty($result['expire_time'])) ? '-' : date('Y年m月d日', $result['expire_time']);
-        $data['user_type'] = $result['user_type'];
-        $data['user_money'] = $result['user_money'] / 100;
-        return $data;
+        return $result;
     }
 
     /**

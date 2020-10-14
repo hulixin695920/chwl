@@ -11,6 +11,7 @@ Route::group([
     'as'            => config('admin.route.prefix') . '.',
 ], function (Router $router) {
     $router->resource('project', 'ProjectController');
+    $router->resource('banner', 'BannerController');
     $router->get('/', 'HomeController@index')->name('home');
 
 });

@@ -38,6 +38,13 @@ $router->group([
 
     $router->get('/get-user-info', 'UserController@getInfo');
 
+    //问题反馈
+    $router->post('/add-feedback', 'FeedBackController@addFeedBack');
 
+    $router->get('/banner-list', 'BannerController@bannerList');
+
+    $router->post('/add-click-log', 'ClickLogController@addClickLog');
+
+    $router->post('/add-subscribe-log', 'SubscribeController@addSubscribeLog');
 
 });

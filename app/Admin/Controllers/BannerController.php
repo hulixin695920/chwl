@@ -5,9 +5,6 @@
 
 namespace App\Admin\Controllers;
 
-use App\Admin\Actions\Restore\CommonRestore;
-use App\Admin\Models\BannerModel;
-use App\Admin\Models\BannerPositionModel;
 use App\Http\Controllers\Controller;
 use Encore\Admin\Controllers\HasResourceActions;
 use Encore\Admin\Facades\Admin;
@@ -78,22 +75,14 @@ class BannerController extends Controller
         return Admin::grid(BannerModel::class, function (Grid $grid) {
 
             $grid->id('ID')->sortable();
-            $grid->column('position_id','位置')->display(function ($position_id) {
-                $position = BannerPositionModel::find($position_id);
-                if (!empty($position)) {
-                    return $position->position_name;
-                } else {
-                    return '-';
-                }
-            });
-            $grid->column('ad_img', '图片')->image(env('IMAGE_URL') , 50, 50);
-            $grid->ad_name('banner名称');
-            $grid->ad_link('链接地址');
+            $grid->column('image', '图片')->image(env('IMAGE_URL') , 50, 50);
+            $grid->title('标题');
+            $grid->url('链接地址');
             $states = [
                 'on' => ['value' => 1, 'text' => '启用', 'color' => 'primary'],
                 'off' => ['value' => 0, 'text' => '禁用', 'color' => 'default'],
             ];
-            $grid->column('enabled', '状态')->switch($states);
+            $grid->column('status', '状态')->switch($states);
             $grid->filter(function ($filter) {
                 $filter->disableIdFilter();
                 $filter->scope('trashed', '回收站')->onlyTrashed();
@@ -103,13 +92,6 @@ class BannerController extends Controller
 //            $grid->end_time('结束时间');
 
             $grid->created_at('创建时间')->date('Y-m-d H:i:s')->sortable();
-            $grid->actions(function ($actions) {
-                if (\request('_scope_') == 'trashed') {
-                    $actions->disableDelete();
-                    $actions->disableEdit();
-                    $actions->add(new CommonRestore());
-                }
-            });
         });
     }
 
@@ -120,16 +102,15 @@ class BannerController extends Controller
     protected function form()
     {
         $form = new Form(new BannerModel());
-        $form->select('position_id', '所属位置')->options('/admin/api/banner/position')->required();
-        $form->text('ad_name', 'banner名称')->rules("required");
-        $form->image('ad_img', '图片')->uniqueName()->move('/banner')->rules("required");
-        $form->number('sort_order', '排序')->default(50);
-        $form->text('ad_link', '链接地址');
+        $form->text('title', 'banner名称')->rules("required");
+        $form->image('image', '图片')->uniqueName()->move('/banner')->rules("required");
+        $form->number('sort', '排序')->default(50);
+        $form->text('url', '链接地址');
         $states = [
             'on' => ['value' => 1, 'text' => '启用', 'color' => 'primary'],
             'off' => ['value' => 0, 'text' => '禁用', 'color' => 'default'],
         ];
-        $form->switch('enabled', '状态')->states($states)->default(1);
+        $form->switch('status', '状态')->states($states)->default(1);
 
 //        $form->datetimeRange('start_time', 'end_time', '展示时间');
 
