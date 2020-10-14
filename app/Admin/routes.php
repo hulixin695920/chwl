@@ -12,6 +12,7 @@ Route::group([
 ], function (Router $router) {
     $router->resource('project', 'ProjectController');
     $router->resource('banner', 'BannerController');
+    $router->resource('user', 'UserController');
     $router->get('/', 'HomeController@index')->name('home');
 
 });
