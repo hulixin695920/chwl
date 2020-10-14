@@ -106,7 +106,7 @@ class BannerController extends Controller
         $form->text('title', 'banner名称')->rules("required");
         $form->image('image', '图片')->uniqueName()->move('/banner')->rules("required");
         $form->number('sort', '排序')->default(50);
-        $form->text('url', '链接地址');
+        $form->text('url', '链接地址')->default('');
         $states = [
             'on' => ['value' => 1, 'text' => '启用', 'color' => 'primary'],
             'off' => ['value' => 0, 'text' => '禁用', 'color' => 'default'],
