@@ -19,6 +19,7 @@ class SubscribeController extends Controller
     public function addSubscribeLog(Request $request)
     {
         $params['user_id'] = $request->input('userId', 0);
+        $params['status'] = $request->input('status', 0);
         if (empty($params['user_id'])) {
             CommonUtil::throwException(1, '参数错误');
         }
