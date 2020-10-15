@@ -3,8 +3,8 @@
 
 namespace App\Admin\Controllers;
 
-use App\Admin\Models\UserModel;
 use App\Http\Controllers\Controller;
+use App\Models\Admin\UserModel;
 use Encore\Admin\Controllers\HasResourceActions;
 use Encore\Admin\Facades\Admin;
 use Encore\Admin\Form;
