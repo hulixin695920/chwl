@@ -75,23 +75,24 @@ class UserController extends Controller
         return Admin::grid(UserModel::class, function (Grid $grid) {
             $grid->model()->orderBy('created_at', 'desc');
             $grid->id('ID')->sortable();
+            $grid->realname('真实姓名')->sortable();
             $grid->column('avatar', '头像')->image('', 50, 50);
             $grid->nickname('昵称');
             $grid->code('邀请码');
-            $grid->bail('百分比')->editable();
+//            $grid->bail('百分比')->editable();
             $grid->mobile_phone('手机号')->editable();
             $grid->column('gender', '性别')->using([0 => '未知', 1 => '男', 2 => '女']);
-            $grid->column('user_type', '代理级别')->using([0 => '无', 1 => 'B级代理', 2 => 'A级代理']);
+//            $grid->column('user_type', '代理级别')->using([0 => '无', 1 => 'B级代理', 2 => 'A级代理']);
             $grid->filter(function ($filter) {
                 $filter->disableIdFilter();
 //                $filter->scope('trashed', '回收站')->onlyTrashed();
                 $filter->equal('mobile_phone', '手机号');
                 $filter->like('nickname', '昵称');
-                $filter->equal('is_member', '是否是会员')->radio([
-                    '' => '全部',
-                    0 => '否',
-                    1 => '是',
-                ]);
+//                $filter->equal('is_member', '是否是会员')->radio([
+//                    '' => '全部',
+//                    0 => '否',
+//                    1 => '是',
+//                ]);
             });
             $grid->column('is_member', '标签')->display(function () {
                 if ($this->expire_time == 0) {
@@ -104,13 +105,13 @@ class UserController extends Controller
                     }
                 }
             })->label();
-            $grid->column('expire_time', '过期时间')->display(function () {
-                if ($this->expire_time == 0) {
-                    return '-';
-                } else {
-                    return date('Y-m-d H:i:s', $this->expire_time);
-                }
-            });
+//            $grid->column('expire_time', '过期时间')->display(function () {
+//                if ($this->expire_time == 0) {
+//                    return '-';
+//                } else {
+//                    return date('Y-m-d H:i:s', $this->expire_time);
+//                }
+//            });
 
             $grid->disableCreateButton();
             $grid->country('国家');
@@ -134,7 +135,7 @@ class UserController extends Controller
         $form = new Form(new UserModel());
         $show = new Show(new UserModel());
         $form->text('mobile_phone', '手机号');
-        $form->text('bail', '百分比（%）');
+//        $form->text('bail', '百分比（%）');
         $form->text('code', '邀请码')->readonly();
         $form->radioCard('user_type', '用户类型')->options([0 => '普通用户', 1 => 'B级代理', 2 => 'A级代理'])->default(0);
 
