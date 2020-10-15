@@ -17,7 +17,7 @@ class BannerLogic
      */
     public function getBannerList()
     {
-        $data = BannerModel::getInstance()->get()->toArray();
+        $data = BannerModel::getInstance()->where('status', 1)->get()->toArray();
         foreach ($data as $key => $value) {
             $data[$key]['image'] = env('IMAGE_URL') . $value['image'];
         }
