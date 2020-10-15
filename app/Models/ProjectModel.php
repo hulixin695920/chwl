@@ -22,7 +22,7 @@ class ProjectModel extends BaseModel
     {
         $isEnd = 0;
         $offset = ($page * $pageSize) - $pageSize;
-        $order = ['created_at' => 'desc'];
+        $order = ['sort' => 'desc', 'created_at' => 'desc'];
         $column = ['id', 'app_id', 'title', 'created_at', 'description', 'image', 'url', 'path', 'is_text', 'share_text'];
         $where['status'] = 1;
         $list = $this->getList($column, $where, $order, null, $pageSize, $offset);
