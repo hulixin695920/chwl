@@ -118,8 +118,8 @@ class ProjectController extends Controller
         $form->text('title', '标题')->rules("required");
         $form->radio('is_text', '方式')
             ->options([
-                1 => '启用文案',
                 0 => '启用跳转',
+                1 => '启用文案',
             ])->when(0, function (Form $form) {
                 $form->text('app_id', '小程序ID')->default('');
                 $form->text('path', '小程序路径')->default('');
