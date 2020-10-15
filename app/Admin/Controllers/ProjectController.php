@@ -81,6 +81,9 @@ class ProjectController extends Controller
             $grid->app_id('小程序ID');
 //            $grid->path('小程序路径');
             $grid->description('描述');
+            $grid->column('is_text','描述')->display(function ($state){
+                return $state == 0 ? '小程序跳转' : '文案复制';
+            });
             $states = [
                 'on' => ['value' => 1, 'text' => '启用', 'color' => 'primary'],
                 'off' => ['value' => 0, 'text' => '禁用', 'color' => 'default'],
@@ -113,9 +116,22 @@ class ProjectController extends Controller
     {
         $form = new Form(new ProjectModel());
         $form->text('title', '标题')->rules("required");
-        $form->text('app_id', '小程序ID');
-        $form->text('path', '小程序路径');
-        $form->text('description', '描述');
+        $form->radio('is_text', '方式')
+            ->options([
+                1 => '启用文案',
+                0 => '启用跳转',
+            ])->when(0, function (Form $form) {
+
+                $form->text('share_text', '分享文案')->default('');
+
+            })->when(1, function (Form $form) {
+
+                $form->text('app_id', '小程序ID')->default('');
+                $form->text('path', '小程序路径')->default('');
+
+            })->default(0);
+
+        $form->text('description', '描述')->default('');
         $form->image('image', '封面')->uniqueName()->move('/project')->rules("required");
         $form->number('sort', '排序')->default(50);
         $form->text('url', '链接地址')->default('');
