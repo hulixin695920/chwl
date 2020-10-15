@@ -76,12 +76,12 @@ class ProjectController extends Controller
         return Admin::grid(ProjectModel::class, function (Grid $grid) {
 
             $grid->id('ID')->sortable();
-            $grid->column('image', '封面')->image(env('IMAGE_URL') , 50, 50);
+            $grid->column('image', '封面')->image(env('IMAGE_URL'), 50, 50);
             $grid->title('标题');
             $grid->app_id('小程序ID');
 //            $grid->path('小程序路径');
             $grid->description('描述');
-            $grid->column('is_text','描述')->display(function ($state){
+            $grid->column('is_text', '方式')->display(function ($state) {
                 return $state == 0 ? '小程序跳转' : '文案复制';
             });
             $states = [
@@ -121,14 +121,10 @@ class ProjectController extends Controller
                 1 => '启用文案',
                 0 => '启用跳转',
             ])->when(0, function (Form $form) {
-
-                $form->text('share_text', '分享文案')->default('');
-
-            })->when(1, function (Form $form) {
-
                 $form->text('app_id', '小程序ID')->default('');
                 $form->text('path', '小程序路径')->default('');
-
+            })->when(1, function (Form $form) {
+                $form->text('share_text', '分享文案')->default('');
             })->default(0);
 
         $form->text('description', '描述')->default('');
