@@ -13,6 +13,7 @@ Route::group([
     $router->resource('project', 'ProjectController');
     $router->resource('banner', 'BannerController');
     $router->resource('user', 'UserController');
+    $router->resource('feedback', 'FeedbackController');
     $router->get('/', 'HomeController@index')->name('home');
 
 });
