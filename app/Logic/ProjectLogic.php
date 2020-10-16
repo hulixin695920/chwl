@@ -24,6 +24,7 @@ class ProjectLogic
         if (count($list) > 0) {
             foreach ($list as $key => $value) {
                 $list[$key]->image = env('IMAGE_URL') . $value->image;
+                $list[$key]->share_image = env('IMAGE_URL') . $value->share_image;
             }
             $result['list'] = $list;
         }

@@ -77,6 +77,7 @@ class ProjectController extends Controller
 
             $grid->id('ID')->sortable();
             $grid->column('image', '封面')->image(env('IMAGE_URL'), 50, 50);
+            $grid->column('share_image', '分享封面')->image(env('IMAGE_URL'), 50, 50);
             $grid->title('标题');
             $grid->app_id('小程序ID');
 //            $grid->path('小程序路径');
@@ -129,6 +130,7 @@ class ProjectController extends Controller
 
         $form->text('description', '描述')->default('');
         $form->image('image', '封面')->uniqueName()->move('/project')->rules("required");
+        $form->image('share_image', '分享封面')->uniqueName()->move('/share')->rules("required");
         $form->number('sort', '排序')->default(50);
         $form->text('url', '链接地址')->default('');
         $states = [

@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="33369f9d-1cd7-49ee-be35-a9ed1fad8cf9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Admin/Controllers/NoticeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Admin/Controllers/NoticeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Admin/NoticeModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Admin/NoticeModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Admin/Controllers/ProjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Admin/Controllers/ProjectController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Logic/ProjectLogic.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Logic/ProjectLogic.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/ProjectModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/ProjectModel.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,7 +180,7 @@
       <option name="presentableId" value="Default" />
       <updated>1602483969436</updated>
       <workItem from="1602483971372" duration="39581000" />
-      <workItem from="1602815753787" duration="2514000" />
+      <workItem from="1602815753787" duration="3132000" />
     </task>
     <servers />
   </component>
