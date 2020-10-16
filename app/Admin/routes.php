@@ -14,6 +14,7 @@ Route::group([
     $router->resource('banner', 'BannerController');
     $router->resource('user', 'UserController');
     $router->resource('feedback', 'FeedbackController');
+    $router->resource('notice', 'NoticeController');
     $router->get('/', 'HomeController@index')->name('home');
 
 });

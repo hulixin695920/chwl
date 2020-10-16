@@ -47,4 +47,6 @@ $router->group([
 
     $router->post('/add-subscribe-log', 'SubscribeController@addSubscribeLog');
 
+    $router->get('/notice-list', 'NoticeController@getNotice');
+
 });
