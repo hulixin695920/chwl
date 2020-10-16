@@ -3,8 +3,7 @@
 
 namespace App\Models\Admin;
 
-
-use Encore\Admin\Grid\Model;
+use Illuminate\Database\Eloquent\Model;
 
 class NoticeModel extends Model
 {
