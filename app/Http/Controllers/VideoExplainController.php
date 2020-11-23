@@ -18,7 +18,14 @@ class VideoExplainController extends Controller
         if (empty($url)) {
             CommonUtil::throwException(1, 'url有误');
         }
-        return VideoExplainLogic::getInstance()->explain($url);
+
+        preg_match_all("/http(s)?:[\/]{2}[a-z]+[.]{1}[a-z\d\-]+[.]{1}[a-z\d]*[\/]*[A-Za-z\d]*[\/]*[A-Za-z\d]*/",$url,$array2);
+
+        if (!isset($array2[0]) || empty($array2[0])) {
+            CommonUtil::throwException(1, 'url有误');
+        }
+//        print_r($array2[0][0]);die;
+        return VideoExplainLogic::getInstance()->explain(trim($array2[0][0]));
     }
 
 }
