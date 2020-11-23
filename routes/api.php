@@ -49,4 +49,6 @@ $router->group([
 
     $router->get('/notice-list', 'NoticeController@getNotice');
 
+    $router->post('/url-explain','VideoExplainController@index');
+
 });

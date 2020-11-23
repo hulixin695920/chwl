@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="33369f9d-1cd7-49ee-be35-a9ed1fad8cf9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/chw.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/chw.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Admin/Controllers/ProjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Admin/Controllers/ProjectController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Logic/ProjectLogic.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Logic/ProjectLogic.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/ProjectModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/ProjectModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,6 +138,7 @@
       <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
       <path value="$PROJECT_DIR$/vendor/symfony/cache-contracts" />
       <path value="$PROJECT_DIR$/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/vendor/smalls/video-tools" />
     </include_path>
   </component>
   <component name="ProjectId" id="1ilZ7EU4Hpx3mRDmX8oQgyMNg5D" />
@@ -148,7 +151,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Admin/Controllers" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
@@ -180,7 +183,12 @@
       <option name="presentableId" value="Default" />
       <updated>1602483969436</updated>
       <workItem from="1602483971372" duration="39581000" />
-      <workItem from="1602815753787" duration="3132000" />
+      <workItem from="1602815753787" duration="4291000" />
+      <workItem from="1603178358658" duration="6896000" />
+      <workItem from="1603356859445" duration="5408000" />
+      <workItem from="1604286700882" duration="515000" />
+      <workItem from="1604906562220" duration="6528000" />
+      <workItem from="1606099351939" duration="1352000" />
     </task>
     <servers />
   </component>
@@ -188,24 +196,31 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="786" y="415" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1602562080479">
-      <screen x="48" y="23" width="2000" height="1257" />
+    <state x="792" y="415" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1603187084770">
+      <screen x="57" y="23" width="1991" height="1257" />
     </state>
+    <state x="792" y="415" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-168.-1417.2560.1417/57.23.1991.1257@57.23.1991.1257" timestamp="1603187084770" />
     <state x="786" y="415" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/48.23.2000.1257@48.23.2000.1257" timestamp="1602562080479" />
-    <state x="800" y="483" key="NewPhpClassDialog" timestamp="1602821263957">
+    <state x="800" y="483" key="NewPhpClassDialog" timestamp="1603181515382">
       <screen x="57" y="23" width="1991" height="1257" />
     </state>
     <state x="795" y="483" key="NewPhpClassDialog/-168.-1417.2560.1417/48.23.2000.1257@48.23.2000.1257" timestamp="1602493460669" />
     <state x="794" y="483" key="NewPhpClassDialog/47.23.2001.1257@47.23.2001.1257" timestamp="1602730392116" />
     <state x="795" y="483" key="NewPhpClassDialog/48.23.2000.1257@48.23.2000.1257" timestamp="1602664538075" />
-    <state x="800" y="483" key="NewPhpClassDialog/57.23.1991.1257@57.23.1991.1257" timestamp="1602821263957" />
+    <state x="800" y="483" key="NewPhpClassDialog/57.23.1991.1257@57.23.1991.1257" timestamp="1603181515382" />
     <state x="867" y="585" key="NewPhpFileDialog" timestamp="1602560587872">
       <screen x="48" y="23" width="2000" height="1257" />
     </state>
     <state x="867" y="585" key="NewPhpFileDialog/48.23.2000.1257@48.23.2000.1257" timestamp="1602560587872" />
-    <state x="695" y="415" width="689" height="472" key="find.popup" timestamp="1602741746773">
-      <screen x="47" y="23" width="2001" height="1257" />
+    <state x="708" y="486" key="com.intellij.ide.util.TipDialog" timestamp="1604906564349">
+      <screen x="57" y="23" width="1991" height="1257" />
     </state>
+    <state x="708" y="486" key="com.intellij.ide.util.TipDialog/57.23.1991.1257@57.23.1991.1257" timestamp="1604906564349" />
+    <state x="704" y="415" width="689" height="472" key="find.popup" timestamp="1603357211635">
+      <screen x="60" y="23" width="1988" height="1257" />
+    </state>
+    <state x="702" y="415" width="689" height="472" key="find.popup/-168.-1417.2560.1417/57.23.1991.1257@57.23.1991.1257" timestamp="1603186628754" />
+    <state x="704" y="415" width="689" height="472" key="find.popup/2048.-352.2560.1417/60.23.1988.1257@60.23.1988.1257" timestamp="1603357211635" />
     <state x="695" y="415" width="689" height="472" key="find.popup/47.23.2001.1257@47.23.2001.1257" timestamp="1602741746773" />
   </component>
 </project>
